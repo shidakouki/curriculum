@@ -57,12 +57,12 @@ public class Example {
       System.out.println(remi);
       System.out.println(train);
 
-      private static final String USER_NAME = "alice";
-      private static final String USER_PASSWORD = "alice123";
-      private static final String CONST_MSG_SUCCESS = "ログイン成功です。";
-      private static final String CONST_MSG_ERROR_NAME = "名前に誤りがあります。";
-      private static final String CONST_MSG_ERROR_PASS = "パスワードに誤りがあります。";
-      private static final String CONST_MSG_ERROR_INPUT = "入力情報に誤りがあります。";
+      String USER_NAME = "alice";
+      String USER_PASSWORD = "alice123";
+      String CONST_MSG_SUCCESS = "ログイン成功です。";
+      String CONST_MSG_ERROR_NAME = "名前に誤りがあります。";
+      String CONST_MSG_ERROR_PASS = "パスワードに誤りがあります。";
+      String CONST_MSG_ERROR_INPUT = "入力情報に誤りがあります。";
       String name = "alice";
       String pass = "alice123";
 
@@ -76,5 +76,26 @@ public class Example {
         System.out.println(CONST_MSG_ERROR_INPUT);
       }
 
+      String[] fruits = {"みかん","りんご","ぶどう","メロン"};
+
+      for ( int i = 0; i < fruits.length; i++ ) {
+        System.out.println(fruits[i]);
+      }
+
+      // 1から100までの値を出力し最後に改行する。
+      int i = 1;
+        while(i <= 100) {
+          System.out.print(i);
+          i++;
+        }
+        System.out.println();
+
+      for ( int k = 1; k <=9; k++ ){
+        System.out.print( k + "||" );
+        for ( int j = 1; j <=9; j++ ){
+          System.out.print( k * j + "|");
+        }
+        System.out.println();
+      }
    }   
 }
