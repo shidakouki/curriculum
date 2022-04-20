@@ -21,10 +21,12 @@
     
     .right {
         width: 150px;
+        float: none;
     }
     
     .left {
         width: 150px;
+        float: none;
     }
     
     .footer {
