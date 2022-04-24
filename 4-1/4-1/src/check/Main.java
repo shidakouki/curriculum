@@ -7,18 +7,18 @@ public class Main {
 	public static void main(String[] args) {
 	    
 	    Main printName = new Main();
-	    System.out.println(printName);
+	    printName.printName(firstName,lastName);
 	    	    
 	    Pet pet = new Pet(Constants.CHECK_CLASS_JAVA, Constants.CHECK_CLASS_HOGE);
-	    System.out.println(pet);
+	    pet.introduce();
 	    
 	    RobotPet robotPet = new RobotPet(Constants.CHECK_CLASS_R2D2, Constants.CHECK_CLASS_LUKE);
-	    System.out.println(robotPet);
+	    robotPet.introduce();
 
 	}
 	
-	private String firstName = "shida";
-	private String lastName = "kouki";
+	private static String firstName = "shida";
+	private static String lastName = "kouki";
 	    
 	private void printName(String firstName,String lastName) {
 		String fullName = firstName + lastName;
