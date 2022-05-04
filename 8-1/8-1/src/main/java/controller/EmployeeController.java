@@ -1,18 +1,18 @@
 package controller;
 
+/**
 * 社員情報管理コントローラー
 */
 
 import java.io.IOException;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import bean.EmployeeBean;
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import service.EmployeeService;
 
 public class EmployeeController extends HttpServlet {
@@ -34,10 +34,10 @@ String password = request.getParameter("pass");
  EmployeeService eService = new EmployeeService();
 
  // 問③ EmployeeBeanに、EmployeeServiceよりsearch関数を呼び出し、返り値を格納する。
-  EmployeeBean eBean = EmployeeService.Search(String );
-  return ;
+  EmployeeBean eBean = eService.search(id,password);
+  
  // 問④ nullの部分に適切な引数をセットする。
-request.setAttribute("EmployeeBean", null);
+request.setAttribute("EmployeeBean", eBean);
 
 } catch (Exception e) {
 e.printStackTrace();
