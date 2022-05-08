@@ -22,7 +22,7 @@ throws ServletException, IOException {
 try {
  // 問① index.htmlから送信されたIDとPassWordの値を取得できるように修正しましょう。
 String id = request.getParameter("id");
-String password = request.getParameter("pass");
+String password = request.getParameter("password");
 
 /*
 * IDとPassWordと元に、社員情報を検索する関数の呼び出し、結果をJSPに渡す処理
@@ -31,13 +31,14 @@ String password = request.getParameter("pass");
 
  // 問② EmployeeServiceクラスをインスタンス化する。
 
- EmployeeService eService = new EmployeeService();
+ EmployeeService employeeService = new EmployeeService();
 
  // 問③ EmployeeBeanに、EmployeeServiceよりsearch関数を呼び出し、返り値を格納する。
-  EmployeeBean eBean = eService.search(id,password);
+ EmployeeBean employeeBean = new EmployeeBean();
+ employeeBean = employeeService.search(id,password);
   
  // 問④ nullの部分に適切な引数をセットする。
-request.setAttribute("EmployeeBean", eBean);
+request.setAttribute("EmployeeBean", employeeBean);
 
 } catch (Exception e) {
 e.printStackTrace();
