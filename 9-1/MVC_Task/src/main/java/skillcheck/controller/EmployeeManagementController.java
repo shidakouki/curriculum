@@ -14,6 +14,7 @@ import jakarta.servlet.http.HttpSession;
 import skillcheck.bean.ResponseBean;
 import skillcheck.constant.ConstMessage;
 import skillcheck.exception.MVCException;
+import skillcheck.service.EmployeeManagementService;
 import skillcheck.util.RequestTypeUtil;
 import skillcheck.util.RequestTypeUtil.RequestType;
 
@@ -41,7 +42,8 @@ public final class EmployeeManagementController extends BaseServlet {
         // FIXME Step-4-1: 社員情報管理サービスのインスタンスを生成しなさい。
         // Tips: 定義済みフィールド変数を使用
         // [ここへ記述]
-
+        EmployeeManagementService requestType = new EmployeeManagementService();
+        
         boolean hasSession = false;
 
         try {
@@ -135,6 +137,8 @@ public final class EmployeeManagementController extends BaseServlet {
             // FIXME Step-4-3: 社員情報管理サービスのインスタンス変数を生成しなさい。
             // Tips: 定義済みフィールド変数を使用
             // [ここへ記述]
+            EmployeeManagementService reqEmpIdList = new EmployeeManagementService();
+
 
             reqEmpIdList = rmdGetEmpIdList.apply(request);
             reqEmpIdList.forEach(id -> Logger.log(new Throwable(), "reqEmpId = " + id));
@@ -164,7 +168,9 @@ public final class EmployeeManagementController extends BaseServlet {
             // Tips1: リクエストへレスポンス情報をセット
             // Tips2: キー名は「CONST_REQUST_KEY_FOR_RESPONSE_BEAN」使用
             // [ここへ記述]
+            request.setAttribute("ResponseBean", CONST_REQUST_KEY_FOR_RESPONSE_BEAN);
 
+            
             Logger.log(new Throwable(), "遷移先 = " + this.destinationTarget);
 
             // ログイン成功、かつ、セッションが存在、かつ、フォワード先が設定済みの場合のみフォワード

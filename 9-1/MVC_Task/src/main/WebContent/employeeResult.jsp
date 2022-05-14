@@ -24,7 +24,8 @@
 
         // FIXME Step-2-1: リクエストよりレスポンスBeanを取得しなさい。
         // Tips: 正確な型（クラス）でキャストすること
-        responseBean = [ここへ記述];
+        responseBean = (ResponseBean) request.getAttribute("ResponseBean");
+        
         empResultList = responseBean.getEmplyeeBeanList();
         requestStatus = responseBean.getRequestStaus();
         message = responseBean.getMessage();
@@ -46,7 +47,7 @@
     <br>
     <% if (requestStatus < 2 && !message.isEmpty()) { %>
         <!-- FIXME Step-2-2: 式（Expression）を用いてメッセージ（message）を表示しなさい。 -->
-        <p>[ここへ記述]</p>
+        <p>ログインに成功しました。</p>
     <% } %>
     <% if (!empResultList.isEmpty()) { %>
     <div class="div-table-list">
