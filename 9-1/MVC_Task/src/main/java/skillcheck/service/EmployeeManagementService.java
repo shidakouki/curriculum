@@ -15,6 +15,8 @@ import skillcheck.dao.EmployeeDao;
 import skillcheck.dao.EmployeeDao.ExecuteCase;
 import skillcheck.exception.MVCException;
 
+import skillcheck.logger.Logger;
+
 // FIXME Step-5-1: 「EmployeeBean, ResponseBean, ConstMessage, ConstSQL, EmployeeDao, SC5Exception, Logger」をインポートしなさい。
 // [ここへ記述]
 

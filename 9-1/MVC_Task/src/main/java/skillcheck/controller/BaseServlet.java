@@ -15,6 +15,8 @@ import skillcheck.exception.MVCException;
 import skillcheck.service.EmployeeManagementService;
 import skillcheck.util.PasswordHashUtil;
 
+import skillcheck.logger.Logger;
+
 /**
 サーブレット: 親クラス
  *

@@ -18,6 +18,8 @@ import skillcheck.service.EmployeeManagementService;
 import skillcheck.util.RequestTypeUtil;
 import skillcheck.util.RequestTypeUtil.RequestType;
 
+import skillcheck.logger.Logger;
+
 /**
 社員情報管理コントローラー（メインサーブレット）
  *
