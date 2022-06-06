@@ -42,6 +42,11 @@ public class EmployeeService {
 	// 送信されたIDとPassWordを元に社員情報を検索するためのメソッド
 	public EmployeeBean search(String id, String password) {
 
+		
+		
+		
+		
+		
 		Connection connection = null;
 		Statement statement = null;
 		ResultSet resultSet = null;

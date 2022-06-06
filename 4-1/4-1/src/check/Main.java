@@ -1,4 +1,4 @@
-package check;
++package check;
 
 import constants.Constants;
 
@@ -22,7 +22,7 @@ public class Main {
 	    
 	private void printName(String firstName,String lastName) {
 		String fullName = firstName + lastName;
-		System.out.println("printNameメソッド → " + fullName);
+		System.out.println("printNameメソチE�� ↁE" + fullName);
 	}
 
 }
