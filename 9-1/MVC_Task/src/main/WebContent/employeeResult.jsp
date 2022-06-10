@@ -24,7 +24,7 @@
 
         // FIXME Step-2-1: リクエストよりレスポンスBeanを取得しなさい。
         // Tips: 正確な型（クラス）でキャストすること
-        responseBean = (ResponseBean) request.getAttribute("ResponseBean");
+        responseBean = /*ここへ記述*/(ResponseBean) request.getAttribute("ResponseBean");
         
         empResultList = responseBean.getEmplyeeBeanList();
         requestStatus = responseBean.getRequestStaus();

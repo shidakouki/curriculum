@@ -7,19 +7,15 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
+// FIXME Step-5-1: 「EmployeeBean, ResponseBean, ConstMessage, ConstSQL, EmployeeDao, SC5Exception, Logger」をインポートしなさい。
+// [ここへ記述]
 import skillcheck.bean.EmployeeBean;
 import skillcheck.bean.ResponseBean;
 import skillcheck.constant.ConstMessage;
 import skillcheck.constant.ConstSQL;
 import skillcheck.dao.EmployeeDao;
-import skillcheck.dao.EmployeeDao.ExecuteCase;
 import skillcheck.exception.MVCException;
-
 import skillcheck.logger.Logger;
-
-// FIXME Step-5-1: 「EmployeeBean, ResponseBean, ConstMessage, ConstSQL, EmployeeDao, SC5Exception, Logger」をインポートしなさい。
-// [ここへ記述]
-
 /**
 社員情報管理サービス
 <pre>
@@ -200,6 +196,8 @@ public final class EmployeeManagementService extends BaseService implements Empl
                     // 2. 1で作成したオブジェクトをpreparedStatementへ格納
                     // Tips: sbQueryは、sbQuery.toString()でStringへ変換
                     // [ここへ記述]
+                    preparedStatement = connection.prepareStatement(sbQuery);
+                    preparedStatement.sbQuery.toString(sbQuery);
 
                     // LIKEを使用するため、パラメータを編集
                     final String empId = ExecuteCase.FIND_BY_EMPID_WITH_LIKE.equals(eCase)
@@ -209,9 +207,11 @@ public final class EmployeeManagementService extends BaseService implements Empl
                     // FIXME Step-5-6: preparedStatementに適切なパラメーターをセットしなさい。
                     // Tips: パラメータをセットするインデックスに注意
                     // [ここへ記述]
+                    preparedStatement.setStirng(1,empId);
 
                     // FIXME Step-5-7: preparedStatementよりSQL(SELECT文)を実行し、resultSetへ結果を格納しなさい。
                     // [ここへ記述]
+                    resultSet = preparedStatement.executeQuery();
 
                     Logger.log(new Throwable(), "SQL: " +  this.preparedStatement.toString());
                 }

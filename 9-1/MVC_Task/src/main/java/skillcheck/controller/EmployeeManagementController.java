@@ -43,7 +43,7 @@ public final class EmployeeManagementController extends BaseServlet {
 		// FIXME Step-4-1: 社員情報管理サービスのインスタンスを生成しなさい。
 		// Tips: 定義済みフィールド変数を使用
 		// [ここへ記述]
-		EmployeeManagementService requestType = new EmployeeManagementService();
+		EmployeeManagementService employeeManagementService = new EmployeeManagementService();
 
 		boolean hasSession = false;
 
@@ -117,7 +117,7 @@ public final class EmployeeManagementController extends BaseServlet {
 		Function<HttpServletRequest, List<String>> rmdGetEmpIdList = (rmdRequest) -> {
 			// FIXME Step-4-2: 各jspよりPOSTで送信されたリクエストパラメーターの社員番号を取得しなさい。
 			// Tips: jsp側のname属性と一致させること
-			final String pEmpId = "empld";
+			final String pEmpId = /*ここへ記述*/"empId";
 			return Arrays.asList(pEmpId);
 		};
 		/* 関数型インターフェース（ラムダ式）- END */
@@ -138,7 +138,7 @@ public final class EmployeeManagementController extends BaseServlet {
 			// FIXME Step-4-3: 社員情報管理サービスのインスタンス変数を生成しなさい。
 			// Tips: 定義済みフィールド変数を使用
 			// [ここへ記述]
-			EmployeeManagementService reqEmpIdList = new EmployeeManagementService();
+			EmployeeManagementService employeeManagementService = new EmployeeManagementService();
 
 
 			reqEmpIdList = rmdGetEmpIdList.apply(request);

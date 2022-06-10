@@ -71,10 +71,8 @@
 <!-- FIXME Step-1-1: login.jspに適用するcssファイルのリンクタグを記述しなさい。-->
 <!-- Tips1: common.css、login.cssの2つを適用-->
 <!-- Tips2: 適用するcssファイルのパスの書き方に注意 -->
-<!-- [ここへ記述] -->
-<link rel="stylesheet" type="text/css" href="./css/common.css">
-<!-- [ここへ記述] -->
-<link rel="stylesheet" type="text/css" href="./css/login.css">
+<!-- [ここへ記述] --><link rel="stylesheet" type="text/css" href="./css/common.css">
+<!-- [ここへ記述] --><link rel="stylesheet" type="text/css" href="./css/login.css">
 <script type="text/javascript" src="js/common.js"/></script>
 <title>ログイン</title>
 </head>
@@ -88,7 +86,7 @@
             <!-- 2. class属性と、適用するスタイルの記述-->
             <!-- Tips: common.cssより赤色の文字色を定義しているスタイルを確認 -->
             <!-- [ここへ記述] -->
-            <label></label>
+            <label class="error-label"></label>
             <br>
         <% } %>
         <!-- FIXME Step-1-3: actionに送信先URIを記述しなさい。 -->
