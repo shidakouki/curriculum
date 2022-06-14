@@ -11,7 +11,6 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import jakarta.websocket.Session;
 import skillcheck.bean.ResponseBean;
 import skillcheck.constant.ConstMessage;
 import skillcheck.exception.MVCException;
@@ -44,7 +43,7 @@ public final class EmployeeManagementController extends BaseServlet {
 		// FIXME Step-4-1: 社員情報管理サービスのインスタンスを生成しなさい。
 		// Tips: 定義済みフィールド変数を使用
 		// [ここへ記述]
-		 = new EmployeeManagementService();
+		empId = new EmployeeManagementService();
 
 		boolean hasSession = false;
 
@@ -139,7 +138,7 @@ public final class EmployeeManagementController extends BaseServlet {
 			// FIXME Step-4-3: 社員情報管理サービスのインスタンス変数を生成しなさい。
 			// Tips: 定義済みフィールド変数を使用
 			// [ここへ記述]
-			 = new EmployeeManagementService();
+			empId = new EmployeeManagementService();
 
 
 			reqEmpIdList = rmdGetEmpIdList.apply(request);
