@@ -86,12 +86,12 @@
             <!-- 2. class属性と、適用するスタイルの記述-->
             <!-- Tips: common.cssより赤色の文字色を定義しているスタイルを確認 -->
             <!-- [ここへ記述] -->
-            <label class="error-label"></label>
+            <label class="error-label"><%= message%></label>
             <br>
         <% } %>
         <!-- FIXME Step-1-3: actionに送信先URIを記述しなさい。 -->
         <!-- Tips: 「/このプロジェクト/web.xmlに記述されているservlet-name」 -->
-        <form action="/9-1/employee" method="post">
+        <form action="/MVC_Task/employee" method="post">
             <div class="div-input-flex-area">
                 <div>
                     <label>社員番号　: </label>
