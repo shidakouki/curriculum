@@ -19,9 +19,9 @@
     <button class="click">クリック</button>
     <script>
     //  ここにjQueryを記入
-      $('click').on("click",function(){
-        $('left').animate({left : left.action});
-        $('right').animate({right : right.action});
+      $('.click').on('click',function(){
+        $('.left').css({ width: 0 , transition: 'all 2s ease' });
+        $('.right').css({ width: 0 , transition: 'all 2s ease' });
       });
     </script>
   </body>
