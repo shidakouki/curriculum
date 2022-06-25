@@ -42,17 +42,17 @@
         //①onchangeで使用されている関数の中身を実装してください。
         function changeLang(){
 
-            let select_lan = document.getElementById('select_lan').value;
+            let select_lan = document.getElementById("select_lan").value;
 
-            if( select_lan == 'jpn' ){
-                // document.getElementsById('jpn_L').style.display = "";
-                document.getElementsById('en_L').style.display = "none";
-            }else if( select_lan == 'en'){
-                document.getElementsById('jpn_L').style.display = "none";
-                // document.getElementsById('en_L').style.display = "";
+            if( select_lan == "jpn" ){
+                document.getElementById("jpn_L").style.display = "";
+                document.getElementById("en_L").style.display = "none";
+            }else if( select_lan == "en"){
+                document.getElementById("jpn_L").style.display = "none";
+                document.getElementById("en_L").style.display = "";
             }else{
-                document.getElementsById('jpn_L').style.display = "";
-                document.getElementsById('en_L').style.display = "";
+                document.getElementById("jpn_L").style.display = "";
+                document.getElementById("en_L").style.display = "";
             };
 
             window.onload = viewChange;
