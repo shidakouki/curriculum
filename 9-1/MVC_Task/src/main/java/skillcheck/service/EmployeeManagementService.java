@@ -96,11 +96,11 @@ public final class EmployeeManagementService extends BaseService implements Empl
                 // Tips1: セット項目: 社員番号、パスワード、名前、メールアドレス、プログラミング言語、コメント
                 // Tips2: 正解パターンは複数あり
                 EmployeeBean employeeBean = new EmployeeBean(
-                        this.resultSet.getString("empId"),
+                        this.resultSet.getString("empid"),
                         this.resultSet.getString("password"),
                         this.resultSet.getString("name"),
                         this.resultSet.getString("mail"),
-                        this.resultSet.getString("programingLanguage"),
+                        this.resultSet.getString("programinglanguage"),
                         this.resultSet.getString("comment"));
 
                 // 社員情報リストへ追加

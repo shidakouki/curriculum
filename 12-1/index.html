@@ -20,8 +20,15 @@
     <script>
     //  ここにjQueryを記入
       $('.click').on('click',function(){
-        $('.left').css({ width: 0 , transition: 'all 2s ease' });
-        $('.right').css({ width: 0 , transition: 'all 2s ease' });
+        $('.box').toggleClass('1');
+        // if文を使用して条件分岐させましょう。（ステータスが1の時は閉じる。2の時は開くみたいな）
+        if( $('.box').hasClass('1') ){
+          $('.left').css({ width: 0 , transition: 'all 2s ease' });
+          $('.right').css({ width: 0 , transition: 'all 2s ease' });
+        }else{
+          $('.left').css({ "width" : "50%" , transition: 'all 2s ease' });
+          $('.right').css({ "width" : "50%" , transition: 'all 2s ease' });
+        }
       });
     </script>
   </body>
