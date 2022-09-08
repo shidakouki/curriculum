@@ -24,8 +24,8 @@ public final class ConstSQL {
     // Tips: 更新値や条件値には「?」を使用してください	
     
     /*ここへ記述*/public static final String SQL_INSERT = "INSERT INTO employee (empid, passwoed, name, mail, programinglanguage, comment, createdate, updatedate, deleteflg) VALUES ('?', '?', '?', '?', '?', '?', '?', '?', '?')";
-    /*ここへ記述*/public static final String SQL_UPDATE = "UPDATE employee SET password = ?, name = ?, mail = ?, programinglanguage = ?, comment = ?, createdate = ?, updatedate = ?, deleteflg = ? WHERE empId = ?";
-    /*ここへ記述*/public static final String SQL_SELECT = "SELECT * FROM employee WHERE empId = ?, Password = ?";
+    /*ここへ記述*/public static final String SQL_UPDATE = "UPDATE employee SET password = ?, name = ?, mail = ?, programinglanguage = ?, comment = ?, createdate = ?, updatedate = ?, deleteflg = ? WHERE empid = ?";
+    /*ここへ記述*/public static final String SQL_SELECT = "SELECT * FROM employee WHERE empid = ?, Password = ?";
 
 
     // FIXME Step-2-1: [SQL-SELECT] 社員情報テーブルより、作成日時、更新日時、削除フラグを除いたカラムを取得するクエリを作成しなさい。
