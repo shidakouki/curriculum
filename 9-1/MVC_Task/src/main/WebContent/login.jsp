@@ -95,7 +95,7 @@
             <div class="div-input-flex-area">
                 <div>
                     <label>社員番号　: </label>
-                    <input id="empId" type="text" name="empId" maxlength="5" value=""><br>
+                    <input id="empId" type="text" name="empId" maxlength="5" value="<%=empId%>"><br>
                 </div>
                 <div>
                     <label>パスワード: </label>
